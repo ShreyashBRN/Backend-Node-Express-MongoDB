@@ -1,13 +1,21 @@
 const express = require('express');
 const app = express();
 
-app.use((req, res, next) => {
+app.use('/',(req, res, next) => {
     console.log("Hello from First middleware");
-    next();
+//     res.send(`
+//     <h1>Welcome to the Backend Server</h1>
+//     <p>Click below to submit your data:</p>
+//     <a href="/submit">Submit</a>
+//   `);
+next();
+    
     
 })
-app.use((req, res, next) => {
+app.use('/submit',(req, res, next) => {
     console.log("Hello from Second middleware");
+    next()
+    
     
 })
 
