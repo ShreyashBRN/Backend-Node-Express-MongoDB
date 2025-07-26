@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express();
+app.set('view engine', 'ejs');
+app.set('views', 'views')
 const userRouter = require('./Router/userRouter.cjs')
-const hostRouter = require('./Router/hostRouter.cjs')
+const {hostRouter} = require('./Router/hostRouter.cjs')
 const path = require('path')
 
 const rootDir = require("./utils/pathUtil.cjs")

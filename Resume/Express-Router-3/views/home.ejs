@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AirBnB - Home</title>
+  <link rel="stylesheet" href="output.css" />
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md p-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-red-500">AirBnb</h1>
+      <div class="space-x-4">
+        <a href="/" class="text-gray-700 hover:text-red-500 font-medium">Go to Home</a>
+        <a href="/host/add-home" class="text-white bg-red-500 px-4 py-2 rounded hover:bg-red-600">Add Home</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="py-20 text-center">
+    <h2 class="text-4xl font-extrabold text-blue-600 mb-4">Here are our registered Homes</h2>
+    <ul>
+      <% registeredHomes.forEach(home => { %>
+        <li><%= home.hoiseName %></li>
+      <% }) %>
+    </ul>
+  </section>
+
+</body>
+</html>
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirBnB-Home</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <h1 class="text-blue-600">Welcome to AirBnb</h1>
+    <a href="/host/add-home">Add Home</a>
+</body>
+</html> -->
+
+

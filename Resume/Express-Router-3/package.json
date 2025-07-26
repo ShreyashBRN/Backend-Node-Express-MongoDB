@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "tailwind": "tailwindcss -i ./views/input.css -o ./public/output.css --watch",
-  "server": "nodemon app.cjs",
-  "start": "concurrently \"npm:server\" \"npm:tailwind\""
-},
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind": "tailwindcss -i ./views/input.css -o ./public/output.css --watch",
+    "server": "nodemon app.cjs",
+    "start": "concurrently \"npm:server\" \"npm:tailwind\""
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
     "express": "^5.1.0"
   }
 }

@@ -8,10 +8,15 @@ const rootDir = require("../utils/pathUtil.cjs")
 hostRouter.get('/add-home', (req, res, next) => {
   res.sendFile(path.join(rootDir, 'views','add-home.html'));
 });
+
+
+const registeredHomes = [];
+
 hostRouter.post('/add-home', (req, res, next) => {
-  console.log(req.body);
-  
+  console.log("Home registered successfully!", req.body, req.body.hoiseName);
+  registeredHomes.push({hoiseName: req.body.hoiseName})
   res.sendFile(path.join(rootDir, 'views','home-added.html'));
 });
 
-module.exports = hostRouter;
+exports.hostRouter = hostRouter;
+exports.registeredHomes = registeredHomes;
