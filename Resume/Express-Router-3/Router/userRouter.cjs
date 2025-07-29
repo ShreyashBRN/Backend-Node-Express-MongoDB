@@ -9,7 +9,7 @@ const { registeredHomes } = require('./hostRouter.cjs');
 userRouter.get('/', (req, res, next) => {
   console.log(registeredHomes);
   
-  res.render('home', {registeredHomes: registeredHomes})
+  res.render('home.ejs', {registeredHomes: registeredHomes})
   
 });
 
