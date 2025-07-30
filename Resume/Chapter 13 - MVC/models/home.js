@@ -28,4 +28,4 @@ module.exports = class Home {
       callback(!err ? JSON.parse(data) : []);
     });
   }
-}
+};
