@@ -40,8 +40,17 @@ exports.getFavouriteList = (req, res, next) => {
 exports.getHomeDetails = (req, res, next) => {
   const homeId = req.params.homeId;
   console.log(homeId);
-  res.render("store/home-detail", {
-      pageTitle: "Home Detail",
-      currentPage: "Home",
-    })
+  Home.findById(homeId, home => {
+    if(!home){
+      console.log("NOT deails found")
+      res.redirect("/homes")
+    }else{
+    
+    res.render("store/home-detail", {
+        home: home,
+        pageTitle: "Home Detail",
+        currentPage: "Home",
+      })
+    }
+  })
 }
